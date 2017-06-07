@@ -1,0 +1,541 @@
+﻿
+一、定义
+define serverUrl = http://localhost:28088
+二、接口
+	获取资产信息列表
+	以ID搜索资产信息
+	新增资产信息
+	编辑资产信息
+	删除资产信息
+	打印资产二维码
+
+	导入数据
+	导出数据
+	
+获取资产信息列表
+${serverUrl}/asset/getAssetList.do
+
+	request：
+	{
+		searchType：
+			描述：必填，搜索类型，现在支持按Id、资产名称、资产种类、显示全部四种；
+			可选值："searchByAssetName"/"searchByAssetCategory"/"searchAll";
+		keyWord：
+			描述：非必填，搜索关键字；searchType="searchAll"时忽略搜索关键字；
+		pageNum：
+			描述：非必填，分页第几页
+		pageSize：
+			描述：非必填，分页大小；
+			
+	}
+	success：
+	{
+		"status": 0,
+		"data": {
+			"pageNum": 1,
+			"pageSize": 10,
+			"size": 10,
+			"orderBy": null,
+			"startRow": 1,
+			"endRow": 10,
+			"total": 12,
+			"pages": 2,
+			"list": [
+				{
+					"assetId": "GA030001",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "T450",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "屈文芙",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GA030002",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "X250",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科（外用）",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "袁培",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GA030003",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "X250",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "IE云",
+					"departmentResponsibility": "IE云",
+					"personInCharge": "周哲",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GS030007",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "E450",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "IE云（外用）",
+					"departmentResponsibility": "IE云",
+					"personInCharge": "谢国涛",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030016",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "机房",
+					"departmentResponsibility": "综合部",
+					"personInCharge": "应立伟",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030019",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "机房",
+					"departmentResponsibility": "综合部",
+					"personInCharge": "应立伟",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030021",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科（外用）",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "储承兴",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030023",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "牟桂雄",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030025",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "市场部（外用）",
+					"departmentResponsibility": "市场部",
+					"personInCharge": "钟青青",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GZ030005",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "E560",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "董事长",
+					"departmentResponsibility": "董事长",
+					"personInCharge": "应总",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				}
+			],
+			"firstPage": 1,
+			"prePage": 0,
+			"nextPage": 2,
+			"lastPage": 2,
+			"isFirstPage": true,
+			"isLastPage": false,
+			"hasPreviousPage": false,
+			"hasNextPage": true,
+			"navigatePages": 8,
+			"navigatepageNums": [
+				1,
+				2
+			]
+		}
+	}
+	fail:
+	{
+		{
+			"status": 2,
+			"msg": "ILLEGAL_ARGUMENT"
+		}
+	}
+	
+以ID搜索资产信息
+${serverUrl}/asset/getAssetById.do
+
+	request：
+	{
+		String assetId:
+			描述：资产Id，必填；
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"data": [
+						{
+							"assetId": "GZ030005",
+							"assetName": "IBM笔记本",
+							"assetCategory": "笔记本",
+							"brandSpecification": "E560",
+							"unitMeasurement": "台",
+							"bookAmount": 1,
+							"inventoryAmount": 1,
+							"storageLocation": "董事长",
+							"departmentResponsibility": "董事长",
+							"personInCharge": "应总",
+							"statusUsage": "在用",
+							"createTime": 1495156013000,
+							"updateTime": 1495156013000
+						}
+					]
+		}
+		or
+		{
+			"status": 0
+		}
+	}
+
+	
+新增资产信息
+${serverUrl}/asset/addAssetItem.do
+
+	request：
+	{
+		String assetId:
+			描述：资产Id，必填；
+			可选参数：如果重复，将返回失败；
+
+		String assetName：
+			描述：资产名称；
+
+		String assetCategory：
+			描述：资产类型；
+
+		String brandSpecification：
+			描述：资产规格；
+
+		String unitMeasurement：
+			描述：资产计量单位；
+
+		Integer bookAmount：
+			描述：资产账面值；
+
+		Integer inventoryAmount：
+			描述：资产盘点值；
+
+		String storageLocation：
+			描述：资产存放位置；
+
+		String departmentResponsibility：
+			描述：资产责任部门；
+
+		String personInCharge：
+			描述：资产责任人；
+
+		String statusUsage：
+			描述：资产"在用"或"保管"			
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "增加资产信息成功"
+		}
+	}
+	fail:
+	{
+		若资产Id已经存在：
+		{
+			"status": 1,
+			"msg": "资产编码已存在"
+		}，
+		其他错误：
+		{
+			"status": 1,
+			"msg": "增加资产信息失败"
+		}，
+	}
+	
+编辑资产信息
+${serverUrl}/asset/updateAssetInfo.do
+
+	request：
+	{
+		String assetId:
+			描述：资产Id，必填，作为资产主键，不能编辑；
+
+		String assetName：
+			描述：资产名称；
+
+		String assetCategory：
+			描述：资产类型；
+
+		String brandSpecification：
+			描述：资产规格；
+
+		String unitMeasurement：
+			描述：资产计量单位；
+
+		Integer bookAmount：
+			描述：资产账面值；
+
+		Integer inventoryAmount：
+			描述：资产盘点值；
+
+		String storageLocation：
+			描述：资产存放位置；
+
+		String departmentResponsibility：
+			描述：资产责任部门；
+
+		String personInCharge：
+			描述：资产责任人；
+
+		String statusUsage：
+			描述：资产"在用"或"保管"			
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "更新资产信息成功"
+		}
+	}
+	fail:
+	{
+		{
+			"status": 1,
+			"msg": "更新资产信息失败"
+		}
+	}
+
+删除资产信息
+${serverUrl}/asset/deleteItem.do
+
+	request：
+	{
+		String assetId:
+			描述：资产Id，必填；
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "删除资产信息成功"
+		}
+	}
+	fail:
+	{
+		若资产Id不存在：
+		{
+			"status": 1,
+			"msg": "没有对应资产信息"
+		}，
+		其他错误：
+		{
+			"status": 1,
+			"msg": "删除资产信息失败"
+		}，
+	}
+	
+
+打印资产二维码
+${serverUrl}/asset/printQRcode.do
+	request：
+	{
+		String assetId:
+			描述：资产Id，必填；
+		String assetName:
+			描述：资产名称，必填；
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "打印过程OK"
+		}
+	}
+	fail:
+	{
+		{
+			"status": 1,
+			"msg": "打印出错"
+		}，
+	}
+
+导入数据
+${serverUrl}/asset/importAssetRecord.do
+METHOD:post
+	request：
+	{
+		MultipartFile file
+			名称必须为file
+			格式必须为预先确定好的assetRecord.xsxl
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "批量添加资产信息成功, excel中读取%d条记录, 写入数据库%d条记录", total, available
+		}
+	}
+	fail:
+	{
+		无法从excel中读取数据，或读取数据记录数为0
+		{
+			"status": 1,
+			"msg": "excel中读取的记录数为0"
+		}，
+
+		数据记录有效条数为0（资产ID必须有，且不能重复）
+		{
+			"status": 1,
+			"msg": "导入数据库记录为0"
+		}，
+		过程出现异常
+		{
+			"status": 1,
+			"msg": "批量添加资产信息出错"
+		}
+	}
+
+
+导出数据
+${serverUrl}/asset/exportStorageRecord.do
+METHOD:get
+	request：（下面所有项非必须，如果不填表示全选）
+	{
+		String assetId:
+			描述：资产Id；
+
+		String assetName：
+			描述：资产名称；
+
+		String assetCategory：
+			描述：资产类型；
+
+		String brandSpecification：
+			描述：资产规格；
+
+		String unitMeasurement：
+			描述：资产计量单位；
+
+		Integer bookAmount：
+			描述：资产账面值；
+
+		Integer inventoryAmount：
+			描述：资产盘点值；
+
+		String storageLocation：
+			描述：资产存放位置；
+
+		String departmentResponsibility：
+			描述：资产责任部门；
+
+		String personInCharge：
+			描述：资产责任人；
+
+		String statusUsage：
+			描述：资产"在用"或"保管"			
+	}
+
+
+自由选择
+${serverUrl}/asset/getAssetSelect.do
+	request：（下面所有项非必须，如果不填表示全选）
+	{
+		String assetId:
+			描述：资产Id；
+
+		String assetName：
+			描述：资产名称；
+
+		String assetCategory：
+			描述：资产类型；
+
+		String brandSpecification：
+			描述：资产规格；
+
+		String unitMeasurement：
+			描述：资产计量单位；
+
+		Integer bookAmount：
+			描述：资产账面值；
+
+		Integer inventoryAmount：
+			描述：资产盘点值；
+
+		String storageLocation：
+			描述：资产存放位置；
+
+		String departmentResponsibility：
+			描述：资产责任部门；
+
+		String personInCharge：
+			描述：资产责任人；
+
+		String statusUsage：
+			描述：资产"在用"或"保管"
+			
+		pageNum：
+			描述：非必填，分页第几页
+		pageSize：
+			描述：非必填，分页大小；
+
+	}

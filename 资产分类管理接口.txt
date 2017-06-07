@@ -1,0 +1,140 @@
+一、定义
+define serverUrl = http://localhost:28088
+二、接口
+	获取资产分类列表
+	增加资产分类
+	修改资产分类
+	删除资产分类
+
+
+获取资产分类列表
+${serverUrl}/manage/assetCategory/getCategory.do
+	request：
+	{
+		pageNum：
+			描述：非必填，分页第几页
+		pageSize：
+			描述：非必填，分页大小；
+	}
+	
+	success：
+	{
+		{
+			"status": 0,
+			"data": {
+				"pageNum": 1,
+				"pageSize": 10,
+				"size": 1,
+				"orderBy": null,
+				"startRow": 1,
+				"endRow": 1,
+				"total": 1,
+				"pages": 1,
+				"list": [
+					{
+						"id": 2,
+						"categoryName": "澶╀娇琛�",
+						"detail": null,
+						"createTime": 1496823961000,
+						"updateTime": 1496823961000
+					}
+				],
+				"firstPage": 1,
+				"prePage": 0,
+				"nextPage": 0,
+				"lastPage": 1,
+				"isFirstPage": true,
+				"isLastPage": true,
+				"hasPreviousPage": false,
+				"hasNextPage": false,
+				"navigatePages": 8,
+				"navigatepageNums": [
+					1
+				]
+			}
+		}
+	}
+
+增加资产分类列表
+${serverUrl}/manage/assetCategory/addCategory.do
+	request：
+	{
+		Integer id，非必须，不建议填写
+		String categoryName，必须，重复将报错
+		String detail，非必须
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "添加资产分类信息成功"
+		}
+	}
+	fail:
+	{
+		若资产Id已经存在：
+		{
+			"status": 1,
+			"msg": "资产分类已存在"
+		}，
+		其他错误：
+		{
+			"status": 1,
+			"msg": "添加资产分类信息失败"
+		}
+
+	}
+	
+	
+修改资产分类列表
+${serverUrl}/manage/assetCategory/updateCategory.do
+	request：
+	{
+		Integer id，非必须，不建议填写
+		String categoryName，必须，重复将报错
+		String detail，非必须
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "添加资产分类信息成功"
+		}
+	}
+	fail:
+	{
+		若资产Id已经存在：
+		{
+			"status": 1,
+			"msg": "资产分类已存在"
+		}，
+		其他错误：
+		{
+			"status": 1,
+			"msg": "添加资产分类信息失败"
+		}
+
+	}
+
+删除资产分类
+${serverUrl}/manage/assetCategory/deleteCategory.do
+	request：
+	{
+		Integer id，必须
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "删除资产分类信息成功"
+		}
+	}
+	fail:
+	{
+		{
+			"status": 1,
+			"msg": "删除资产分类信息失败"
+		}
+
+	}
+
