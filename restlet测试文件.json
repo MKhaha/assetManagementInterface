@@ -1,0 +1,1486 @@
+{
+  "front-version": "2.4.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "E6C2D584-0626-4C80-BE08-CF569B27ACB4",
+      "lastModified": "2017-06-07T18:25:35.370+08:00",
+      "name": "assetmanage"
+    },
+    {
+      "type": "Service",
+      "id": "AF71493E-4767-4199-99AC-B5572C4D8159",
+      "lastModified": "2017-05-19T16:57:12.201+08:00",
+      "name": "asset",
+      "parentId": "E6C2D584-0626-4C80-BE08-CF569B27ACB4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "Gtest"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetName",
+              "value": "资产测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetCategory",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "brandSpecification",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "unitMeasurement",
+              "value": "台"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "bookAmount",
+              "value": "1"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "inventoryAmount",
+              "value": "0"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "storageLocation",
+              "value": "虚拟"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentResponsibility",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "personInCharge",
+              "value": "国涛"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "statusUsage",
+              "value": "测试"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/addAssetItem.do"
+      },
+      "id": "21F35057-0955-41F4-8EFC-2496B392B866",
+      "lastModified": "2017-05-23T08:52:52.302+08:00",
+      "name": "addAssetItem.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "Gtest"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/deleteItem.do"
+      },
+      "id": "7C24F557-C567-49A4-84D1-58DC93A9CE16",
+      "lastModified": "2017-05-23T09:23:50.907+08:00",
+      "name": "deleteItem.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "File",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "assetName",
+              "value": "笔记本"
+            },
+            {
+              "enabled": true,
+              "name": "assetCategory",
+              "value": "笔记本"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/exportStorageRecord.do"
+      },
+      "id": "43FFCBAC-7471-4505-AE9A-D9FF0FE339C4",
+      "lastModified": "2017-06-07T18:25:35.370+08:00",
+      "name": "exportStorageRecord.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "mu"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "Gtest"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getAssetById.do"
+      },
+      "id": "420E5B88-B096-441C-B093-D6E2CFFDAF7E",
+      "lastModified": "2017-05-23T09:23:56.527+08:00",
+      "name": "getAssetById.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "searchType",
+              "value": "searchByAssetName"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "keyWord",
+              "value": "IBM笔记本"
+            },
+            {
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize",
+              "value": "10"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getAssetList.do"
+      },
+      "id": "4AED7C70-09D9-4987-8884-8BD4ABF8D65C",
+      "lastModified": "2017-05-23T08:53:03.574+08:00",
+      "name": "getAssetList.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "searchType",
+              "value": "searchAll"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "keyWord",
+              "value": "IBM笔记本"
+            },
+            {
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize",
+              "value": "10"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getAssetList.do"
+      },
+      "id": "BB9E46DD-09D3-48E7-9B43-7E774E916EC4",
+      "lastModified": "2017-05-23T08:53:07.726+08:00",
+      "name": "getAssetList.do-searchAll",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "searchType",
+              "value": "searchByAssetCategory"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "keyWord",
+              "value": "笔记本"
+            },
+            {
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize",
+              "value": "10"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getAssetList.do"
+      },
+      "id": "8D03D138-14D3-49A2-B82B-620E77F5DB83",
+      "lastModified": "2017-05-23T08:56:02.037+08:00",
+      "name": "getAssetList.do-searchByAssetCategory",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "searchType",
+              "value": "searchByAssetName"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "keyWord",
+              "value": "IBM笔记本"
+            },
+            {
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize",
+              "value": "10"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getAssetList.do"
+      },
+      "id": "C1F201C3-9F03-487B-9FC0-9E9480673250",
+      "lastModified": "2017-05-23T08:53:18.412+08:00",
+      "name": "getAssetList.do-searchByAssetName",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "searchByAssetName"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetName",
+              "value": "笔记本"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetCategory",
+              "value": "笔记本"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "brandSpecification"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "unitMeasurement"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "bookAmount"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "inventoryAmount"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "storageLocation"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentResponsibility"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "personInCharge"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "statusUsage"
+            },
+            {
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize",
+              "value": "10"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getAssetSelect.do"
+      },
+      "id": "84EC227F-8830-425B-A685-3AC7A9694868",
+      "lastModified": "2017-06-07T17:20:04.615+08:00",
+      "name": "getAssetSelect.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "111"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/printQRcode.do"
+      },
+      "id": "02DFB81E-19F4-44C0-9175-FB96361ECF73",
+      "lastModified": "2017-06-01T15:56:24.079+08:00",
+      "name": "printQRcode.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "Gtest"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetName",
+              "value": "资产测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetCategory",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "brandSpecification",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "unitMeasurement",
+              "value": "台"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "bookAmount",
+              "value": "5"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "inventoryAmount",
+              "value": "0"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "storageLocation",
+              "value": "虚拟"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentResponsibility",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "personInCharge",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "statusUsage",
+              "value": "测试"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/updateAssetInfo.do"
+      },
+      "id": "D8FDA416-9989-4F9E-84B5-02FFD5AD7B2C",
+      "lastModified": "2017-05-23T09:24:05.014+08:00",
+      "name": "updateAssetInfo.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Service",
+      "id": "F2C3954C-85C1-484F-AB9D-5EEE2D09CF90",
+      "lastModified": "2017-06-07T16:20:45.306+08:00",
+      "name": "category",
+      "parentId": "E6C2D584-0626-4C80-BE08-CF569B27ACB4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "categoryName",
+              "value": "IT类"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/assetCategory/addCategory.do"
+      },
+      "id": "FEF322C0-5972-4BB5-A4C5-E6258CCF9F04",
+      "lastModified": "2017-06-07T16:22:53.646+08:00",
+      "name": "addCategory.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "F2C3954C-85C1-484F-AB9D-5EEE2D09CF90"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentID",
+              "value": "2"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/assetCategory/deleteCategory.do"
+      },
+      "id": "265ED0F4-32C9-4D50-B558-8FF8BEDB4E6B",
+      "lastModified": "2017-06-07T16:30:04.076+08:00",
+      "name": "deleteCategory.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "F2C3954C-85C1-484F-AB9D-5EEE2D09CF90"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "type": "Text",
+              "name": "pageNum"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/assetCategory/getCategory.do"
+      },
+      "id": "FFB262FC-3A19-45A7-830E-5581A3C14173",
+      "lastModified": "2017-06-07T16:27:04.832+08:00",
+      "name": "getCategory.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "F2C3954C-85C1-484F-AB9D-5EEE2D09CF90"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "id",
+              "value": "1"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "categoryName",
+              "value": "考勤"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/assetCategory/updateCategory.do"
+      },
+      "id": "385B6AC7-BDDD-4058-B372-DD7EB2F76B2D",
+      "lastModified": "2017-06-07T16:29:40.041+08:00",
+      "name": "updateCategory.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "F2C3954C-85C1-484F-AB9D-5EEE2D09CF90"
+    },
+    {
+      "type": "Service",
+      "id": "CB3F59A4-55FC-4251-8387-7F68A5D33FBA",
+      "lastModified": "2017-06-07T15:28:15.719+08:00",
+      "name": "department",
+      "parentId": "E6C2D584-0626-4C80-BE08-CF569B27ACB4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentName",
+              "value": "综合部"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "detail",
+              "value": "负责考勤、活动、福利等"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/department/addDepartment.do"
+      },
+      "id": "38AA7B9B-A32E-4333-BC49-9DC0692720E9",
+      "lastModified": "2017-06-07T15:38:32.947+08:00",
+      "name": "addDepartment.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "CB3F59A4-55FC-4251-8387-7F68A5D33FBA"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentID",
+              "value": "2"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/department/deleteDepartment.do"
+      },
+      "id": "2ACA815E-A191-41BC-87CA-DAE94BF5455E",
+      "lastModified": "2017-06-07T16:16:12.955+08:00",
+      "name": "deleteDepartment.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "CB3F59A4-55FC-4251-8387-7F68A5D33FBA"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "type": "Text",
+              "name": "pageNum"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/department/getDepartment.do"
+      },
+      "id": "9F84DF7F-3F89-4523-BB70-CFBD54281922",
+      "lastModified": "2017-06-07T15:39:34.223+08:00",
+      "name": "getDepartment.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "CB3F59A4-55FC-4251-8387-7F68A5D33FBA"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentName",
+              "value": "综合部"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "detail",
+              "value": "考勤"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "id",
+              "value": "2"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "//manage/department/updateDepartment.do"
+      },
+      "id": "CFE48F98-BCFB-43F5-9D98-A97EC892BBEC",
+      "lastModified": "2017-06-07T15:47:37.520+08:00",
+      "name": "updateDepartment.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "CB3F59A4-55FC-4251-8387-7F68A5D33FBA"
+    },
+    {
+      "type": "Project",
+      "id": "E728976D-3F47-43A3-B892-050607EF9455",
+      "lastModified": "2017-05-15T16:59:39.740+08:00",
+      "name": "mmall"
+    },
+    {
+      "type": "Service",
+      "description": "",
+      "id": "6C003712-38C2-4C46-886A-7750DCC084DD",
+      "lastModified": "2017-05-15T16:57:45.726+08:00",
+      "name": "manage/category",
+      "parentId": "E728976D-3F47-43A3-B892-050607EF9455"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "str",
+              "value": "admin"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "type",
+              "value": "username"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:28088",
+        "path": "/manage/category/get_category.do"
+      },
+      "id": "B53B89D6-D4CC-4FB6-A3B0-0007BBA3FC4B",
+      "lastModified": "2017-05-15T16:59:39.740+08:00",
+      "name": "get_category.do",
+      "headers": [],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "6C003712-38C2-4C46-886A-7750DCC084DD"
+    },
+    {
+      "type": "Service",
+      "description": "",
+      "id": "30C91DA7-27A4-44F2-8C2B-46076AD0D308",
+      "lastModified": "2017-05-15T11:09:43.775+08:00",
+      "name": "user",
+      "parentId": "E728976D-3F47-43A3-B892-050607EF9455"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "str",
+              "value": "admin"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "type",
+              "value": "username"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:28088",
+        "path": "/user/check_valid.do"
+      },
+      "id": "3F208156-5384-4317-9504-4BBF596E0CC8",
+      "lastModified": "2017-05-15T13:39:48.446+08:00",
+      "name": "check_valid.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "30C91DA7-27A4-44F2-8C2B-46076AD0D308"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "type": "Text",
+              "name": "str",
+              "value": "admin"
+            },
+            {
+              "type": "Text",
+              "name": "type",
+              "value": "username"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:28088",
+        "path": "/user/get_user_info.do"
+      },
+      "id": "46B00C62-014B-45F1-AA4C-6E2833E6ACBE",
+      "lastModified": "2017-05-15T13:41:20.595+08:00",
+      "name": "get_user_info.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "30C91DA7-27A4-44F2-8C2B-46076AD0D308"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "username",
+              "value": "admin"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "password",
+              "value": "admin"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:28088",
+        "path": "/user/login.do"
+      },
+      "id": "D21F484E-EA3A-4C97-A8EC-B0BB9CDFE031",
+      "lastModified": "2017-05-15T11:31:17.004+08:00",
+      "name": "login.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "30C91DA7-27A4-44F2-8C2B-46076AD0D308"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "username",
+              "value": "admin"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "password",
+              "value": "admin"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:28088",
+        "path": "/manage/user/login.do"
+      },
+      "id": "83126FFA-FBCE-4CB7-A220-A4AF4C23E985",
+      "lastModified": "2017-05-15T11:18:11.268+08:00",
+      "name": "managelogin.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "30C91DA7-27A4-44F2-8C2B-46076AD0D308"
+    }
+  ]
+}
