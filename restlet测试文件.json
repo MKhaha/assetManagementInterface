@@ -5,7 +5,7 @@
     {
       "type": "Project",
       "id": "E6C2D584-0626-4C80-BE08-CF569B27ACB4",
-      "lastModified": "2017-06-08T09:52:21.900+08:00",
+      "lastModified": "2017-06-08T15:37:13.400+08:00",
       "name": "assetmanage"
     },
     {
@@ -1144,7 +1144,7 @@
             {
               "enabled": true,
               "type": "Text",
-              "name": "departmentID",
+              "name": "categoryId",
               "value": "2"
             }
           ]
@@ -1162,7 +1162,7 @@
         "path": "//manage/assetCategory/deleteCategory.do"
       },
       "id": "265ED0F4-32C9-4D50-B558-8FF8BEDB4E6B",
-      "lastModified": "2017-06-07T16:30:04.076+08:00",
+      "lastModified": "2017-06-08T15:35:07.961+08:00",
       "name": "deleteCategory.do",
       "headers": [
         {
@@ -1187,16 +1187,7 @@
         "formBody": {
           "overrideContentType": true,
           "encoding": "application/x-www-form-urlencoded",
-          "items": [
-            {
-              "type": "Text",
-              "name": "pageNum"
-            },
-            {
-              "type": "Text",
-              "name": "pageSize"
-            }
-          ]
+          "items": []
         },
         "bodyType": "Form",
         "autoSetLength": true
@@ -1211,7 +1202,7 @@
         "path": "//manage/assetCategory/getCategory.do"
       },
       "id": "FFB262FC-3A19-45A7-830E-5581A3C14173",
-      "lastModified": "2017-06-07T16:27:04.832+08:00",
+      "lastModified": "2017-06-08T15:34:29.875+08:00",
       "name": "getCategory.do",
       "headers": [
         {
@@ -1241,7 +1232,7 @@
               "enabled": true,
               "type": "Text",
               "name": "id",
-              "value": "1"
+              "value": "2"
             },
             {
               "enabled": true,
@@ -1264,7 +1255,7 @@
         "path": "//manage/assetCategory/updateCategory.do"
       },
       "id": "385B6AC7-BDDD-4058-B372-DD7EB2F76B2D",
-      "lastModified": "2017-06-07T16:29:40.041+08:00",
+      "lastModified": "2017-06-08T15:32:19.649+08:00",
       "name": "updateCategory.do",
       "headers": [
         {
@@ -1301,13 +1292,7 @@
               "enabled": true,
               "type": "Text",
               "name": "departmentName",
-              "value": "综合部"
-            },
-            {
-              "enabled": true,
-              "type": "Text",
-              "name": "detail",
-              "value": "负责考勤、活动、福利等"
+              "value": "综合部2"
             }
           ]
         },
@@ -1324,7 +1309,7 @@
         "path": "//manage/department/addDepartment.do"
       },
       "id": "38AA7B9B-A32E-4333-BC49-9DC0692720E9",
-      "lastModified": "2017-06-07T15:38:32.947+08:00",
+      "lastModified": "2017-06-08T15:35:48.815+08:00",
       "name": "addDepartment.do",
       "headers": [
         {
@@ -1353,7 +1338,7 @@
             {
               "enabled": true,
               "type": "Text",
-              "name": "departmentID",
+              "name": "departmentId",
               "value": "2"
             }
           ]
@@ -1371,7 +1356,7 @@
         "path": "//manage/department/deleteDepartment.do"
       },
       "id": "2ACA815E-A191-41BC-87CA-DAE94BF5455E",
-      "lastModified": "2017-06-07T16:16:12.955+08:00",
+      "lastModified": "2017-06-08T15:37:13.400+08:00",
       "name": "deleteDepartment.do",
       "headers": [
         {
@@ -1396,16 +1381,7 @@
         "formBody": {
           "overrideContentType": true,
           "encoding": "application/x-www-form-urlencoded",
-          "items": [
-            {
-              "type": "Text",
-              "name": "pageNum"
-            },
-            {
-              "type": "Text",
-              "name": "pageSize"
-            }
-          ]
+          "items": []
         },
         "bodyType": "Form",
         "autoSetLength": true
@@ -1420,7 +1396,7 @@
         "path": "//manage/department/getDepartment.do"
       },
       "id": "9F84DF7F-3F89-4523-BB70-CFBD54281922",
-      "lastModified": "2017-06-07T15:39:34.223+08:00",
+      "lastModified": "2017-06-08T15:35:25.612+08:00",
       "name": "getDepartment.do",
       "headers": [
         {
@@ -1449,20 +1425,14 @@
             {
               "enabled": true,
               "type": "Text",
-              "name": "departmentName",
-              "value": "综合部"
-            },
-            {
-              "enabled": true,
-              "type": "Text",
-              "name": "detail",
-              "value": "考勤"
-            },
-            {
-              "enabled": true,
-              "type": "Text",
               "name": "id",
               "value": "2"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentName",
+              "value": "阿斯顿发生"
             }
           ]
         },
@@ -1479,7 +1449,7 @@
         "path": "//manage/department/updateDepartment.do"
       },
       "id": "CFE48F98-BCFB-43F5-9D98-A97EC892BBEC",
-      "lastModified": "2017-06-07T15:47:37.520+08:00",
+      "lastModified": "2017-06-08T15:36:32.932+08:00",
       "name": "updateDepartment.do",
       "headers": [
         {
