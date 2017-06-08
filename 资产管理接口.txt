@@ -12,6 +12,11 @@ define serverUrl = http://localhost:28088
 	导入数据
 	导出数据
 	
+	清空资产盘点数量
+	资产盘点
+	获取已完成资产盘点的资产信息列表
+	获取未完成资产盘点的资产信息列表
+	
 获取资产信息列表
 ${serverUrl}/asset/getAssetList.do
 
@@ -539,3 +544,177 @@ ${serverUrl}/asset/getAssetSelect.do
 			描述：非必填，分页大小；
 
 	}
+	success：
+	{
+		{
+			"status": 0,
+			"data": 分页信息
+		}
+	}
+
+
+	
+清空资产盘点数量
+${serverUrl}/asset/clearInventoryAmount.do
+	request：null
+	success：
+	{
+		{
+			"status": 0,
+			"data": 清空资产盘点数量成功
+		}
+	}
+	fail:
+	{
+		清空资产盘点数量失败
+		{
+			"status": 1,
+			"msg": "清空资产盘点数量失败"
+		}，
+		过程出现异常
+		{
+			"status": 1,
+			"msg": "数据库操作出现问题"
+		}
+	}
+
+
+资产盘点
+${serverUrl}/asset/assetsInventory.do
+	request：（下面所有项非必须，如果不填表示全选）
+	{
+		String assetId:
+			描述：资产Id；
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"data": 更新资产盘点数量成功
+		}
+	}
+	fail:
+	{
+		对应资产信息不存在
+		{
+			"status": 1,
+			"msg": "对应资产信息不存在"
+		}，
+		更新资产盘点数量失败
+		{
+			"status": 1,
+			"msg": "更新资产盘点数量失败"
+		}，
+		过程出现异常
+		{
+			"status": 1,
+			"msg": "数据库操作出现问题"
+		}
+	}
+
+获取已完成资产盘点的资产信息列表
+${serverUrl}/asset/getCompleteInventory.do
+	request：（下面所有项非必须，如果不填表示全选）
+	{
+		String assetId:
+			描述：资产Id；
+
+		String assetName：
+			描述：资产名称；
+
+		String assetCategory：
+			描述：资产类型；
+
+		String brandSpecification：
+			描述：资产规格；
+
+		String unitMeasurement：
+			描述：资产计量单位；
+
+		String storageLocation：
+			描述：资产存放位置；
+
+		String departmentResponsibility：
+			描述：资产责任部门；
+
+		String personInCharge：
+			描述：资产责任人；
+
+		String statusUsage：
+			描述：资产"在用"或"保管"
+			
+		pageNum：
+			描述：非必填，分页第几页
+		pageSize：
+			描述：非必填，分页大小；
+
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"data": 分页信息
+		}
+	}
+	fail:
+	{
+		过程出现异常
+		{
+			"status": 1,
+			"msg": "数据库操作出现问题"
+		}
+	}
+	
+获取未完成资产盘点的资产信息列表
+${serverUrl}/asset/getNotCompleteInventory.do
+	request：（下面所有项非必须，如果不填表示全选）
+	{
+		String assetId:
+			描述：资产Id；
+
+		String assetName：
+			描述：资产名称；
+
+		String assetCategory：
+			描述：资产类型；
+
+		String brandSpecification：
+			描述：资产规格；
+
+		String unitMeasurement：
+			描述：资产计量单位；
+
+		String storageLocation：
+			描述：资产存放位置；
+
+		String departmentResponsibility：
+			描述：资产责任部门；
+
+		String personInCharge：
+			描述：资产责任人；
+
+		String statusUsage：
+			描述：资产"在用"或"保管"
+			
+		pageNum：
+			描述：非必填，分页第几页
+		pageSize：
+			描述：非必填，分页大小；
+
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"data": 分页信息
+		}
+	}
+	fail:
+	{
+		过程出现异常
+		{
+			"status": 1,
+			"msg": "数据库操作出现问题"
+		}
+	}
+

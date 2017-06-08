@@ -5,7 +5,7 @@
     {
       "type": "Project",
       "id": "E6C2D584-0626-4C80-BE08-CF569B27ACB4",
-      "lastModified": "2017-06-07T18:25:35.370+08:00",
+      "lastModified": "2017-06-08T09:52:21.900+08:00",
       "name": "assetmanage"
     },
     {
@@ -110,6 +110,93 @@
       "id": "21F35057-0955-41F4-8EFC-2496B392B866",
       "lastModified": "2017-05-23T08:52:52.302+08:00",
       "name": "addAssetItem.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "G0001"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/assetsInventory.do"
+      },
+      "id": "26EED3C0-3C48-4B6E-A6D1-352DCA641D31",
+      "lastModified": "2017-06-08T09:52:21.901+08:00",
+      "name": "assetsInventory.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/clearInventoryAmount.do"
+      },
+      "id": "93DBE122-72D4-4621-A6B6-80BAEB2923AE",
+      "lastModified": "2017-06-08T09:48:09.054+08:00",
+      "name": "clearInventoryAmount.do",
       "headers": [
         {
           "enabled": true,
@@ -620,6 +707,208 @@
       "id": "84EC227F-8830-425B-A685-3AC7A9694868",
       "lastModified": "2017-06-07T17:20:04.615+08:00",
       "name": "getAssetSelect.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetName",
+              "value": "笔记本"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetCategory",
+              "value": "笔记本"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "brandSpecification"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "unitMeasurement"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "storageLocation"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentResponsibility"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "personInCharge"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "statusUsage"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "pageSize",
+              "value": "30"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getCompleteInventory.do"
+      },
+      "id": "0B74613A-9F76-4CBD-AA74-342513D38144",
+      "lastModified": "2017-06-08T09:46:50.982+08:00",
+      "name": "getCompleteInventory.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetName",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetCategory",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "brandSpecification"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "unitMeasurement"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "storageLocation"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentResponsibility"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "personInCharge"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "statusUsage"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "pageSize",
+              "value": "30"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getNotCompleteInventory.do"
+      },
+      "id": "7FA4E060-ADEB-42BC-A6B3-BD2EF7FF86E8",
+      "lastModified": "2017-06-08T09:48:29.073+08:00",
+      "name": "getNotCompleteInventory.do",
       "headers": [
         {
           "enabled": true,
