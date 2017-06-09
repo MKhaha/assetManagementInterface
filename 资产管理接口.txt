@@ -600,6 +600,11 @@ ${serverUrl}/asset/assetsInventory.do
 			"status": 1,
 			"msg": "对应资产信息不存在"
 		}，
+		该资产已经完成盘点
+		{
+			"status": 1,
+			"msg": "该资产已经完成盘点"
+		}，
 		更新资产盘点数量失败
 		{
 			"status": 1,
