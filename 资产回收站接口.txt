@@ -1,0 +1,379 @@
+
+一、定义
+define serverUrl = http://localhost:28088
+二、接口
+	获取资产回收站列表
+	删除资产回收站单条记录
+	删除资产回收站多条记录
+	资产表中不存在单条资产记录
+	恢复资产回收站中单条记录
+	资产表中不存在多条资产记录
+	恢复资产回收站中多条记录
+	
+获取资产回收站列表
+${serverUrl}/asset/getAssetRecycle.do
+
+	request：
+	{
+		pageNum：
+			描述：非必填，分页第几页
+		pageSize：
+			描述：非必填，分页大小；
+	}
+	success：
+	{
+		"status": 0,
+		"data": {
+			"pageNum": 1,
+			"pageSize": 10,
+			"size": 10,
+			"orderBy": null,
+			"startRow": 1,
+			"endRow": 10,
+			"total": 12,
+			"pages": 2,
+			"list": [
+				{
+					"assetId": "GA030001",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "T450",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "屈文芙",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GA030002",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "X250",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科（外用）",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "袁培",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GA030003",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "X250",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "IE云",
+					"departmentResponsibility": "IE云",
+					"personInCharge": "周哲",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GS030007",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "E450",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "IE云（外用）",
+					"departmentResponsibility": "IE云",
+					"personInCharge": "谢国涛",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030016",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "机房",
+					"departmentResponsibility": "综合部",
+					"personInCharge": "应立伟",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030019",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "机房",
+					"departmentResponsibility": "综合部",
+					"personInCharge": "应立伟",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030021",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科（外用）",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "储承兴",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030023",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "麦吉科",
+					"departmentResponsibility": "麦吉科",
+					"personInCharge": "牟桂雄",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GT030025",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": null,
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "市场部（外用）",
+					"departmentResponsibility": "市场部",
+					"personInCharge": "钟青青",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				},
+				{
+					"assetId": "GZ030005",
+					"assetName": "IBM笔记本",
+					"assetCategory": "笔记本",
+					"brandSpecification": "E560",
+					"unitMeasurement": "台",
+					"bookAmount": 1,
+					"inventoryAmount": 1,
+					"storageLocation": "董事长",
+					"departmentResponsibility": "董事长",
+					"personInCharge": "应总",
+					"statusUsage": "在用",
+					"createTime": 1495156013000,
+					"updateTime": 1495156013000
+				}
+			],
+			"firstPage": 1,
+			"prePage": 0,
+			"nextPage": 2,
+			"lastPage": 2,
+			"isFirstPage": true,
+			"isLastPage": false,
+			"hasPreviousPage": false,
+			"hasNextPage": true,
+			"navigatePages": 8,
+			"navigatepageNums": [
+				1,
+				2
+			]
+		}
+	}
+	fail:
+	{
+		{
+			"status": 2,
+			"msg": "ILLEGAL_ARGUMENT"
+		}
+	}
+	
+	
+	
+删除资产回收站单条记录
+${serverUrl}/asset/deleteAssetRecycleItem.do
+	request：
+	{
+		String assetId
+			描述：资产Id
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "删除回收站中资产信息成功"
+		}
+	}
+	fail:
+	{
+		回收站中没有对应资产信息:
+		{
+			"status": 1,
+			"msg": "回收站中没有对应资产信息"
+		}，
+		其他错误：
+		{
+			"status": 1,
+			"msg": "删除回收站中资产信息失败"
+		}，
+	}
+
+删除资产回收站多条记录
+${serverUrl}/asset/deleteAssetRecycleMultiItem.do
+	request：
+	{
+		List<String> assetIdList
+			描述：资产Id列表
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "删除回收站中多项资产信息成功"
+		}
+	}
+	fail:
+	{
+		回收站中没有对应资产信息:
+		{
+			"status": 1,
+			"msg": "回收站中有部分资产信息不存在"
+			"data"：不存的资产Id列表
+		}，
+		其他错误：
+		{
+			"status": 1,
+			"msg": "删除回收站中资产信息失败"
+		}，
+	}
+
+资产表中不存在单条资产记录
+${serverUrl}/asset/notExistItemInAssetTable.do
+	request：
+	{
+		String assetId
+			描述：资产Id
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "原表中不存在这样的资产编号"
+		}
+	}
+	fail:
+	{
+		原表中存在这样的资产编号:
+		{
+			"status": 1,
+			"msg": "原表中存在这样的资产编号"
+			"data"：存在的资产Id
+		}
+	}
+
+恢复资产回收站中单条记录
+${serverUrl}/asset/recycleAssetItem.do
+	request：
+	{
+		AssetInfo assetInfo
+			描述：资产信息
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "回收成功"
+		}
+	}
+	fail:
+	{
+		回收失败:
+		{
+			"status": 1,
+			"msg": "回收失败"
+		}，
+		传入数据为空:
+		{
+			"status": 1,
+			"msg": "传入数据为空"
+		}
+
+	}
+	
+资产表中不存在多条资产记录
+${serverUrl}/asset/notExistMultiItemInAssetTable.do
+	request：
+	{
+		List<String> assetIdList
+			描述：资产Id列表
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "原表中不存在列表中的资产编号"
+		}
+	}
+	fail:
+	{
+		原表中存在列表中的资产编号:
+		{
+			"status": 1,
+			"msg": "原表中存在列表中的资产编号"
+			"data"：存在的资产Id列表
+		}，
+		传入数据列表为空:
+		{
+			"status": 1,
+			"msg": "传入数据列表为空"
+		}
+
+	}
+
+恢复资产回收站中多条记录
+${serverUrl}/asset/recycleAssetMultiItem.do
+	request：
+	{
+		List<AssetInfo> assetInfoList
+			描述：资产信息列表
+	}
+	success：
+	{
+		{
+			"status": 0,
+			"msg": "回收成功"
+		}
+	}
+	fail:
+	{
+		回收失败:
+		{
+			"status": 1,
+			"msg": "回收失败"
+		}，
+		传入数据列表为空:
+		{
+			"status": 1,
+			"msg": "传入数据列表为空"
+		}
+
+	}

@@ -5,7 +5,7 @@
     {
       "type": "Project",
       "id": "E6C2D584-0626-4C80-BE08-CF569B27ACB4",
-      "lastModified": "2017-06-08T15:37:13.400+08:00",
+      "lastModified": "2017-06-09T14:46:23.568+08:00",
       "name": "assetmanage"
     },
     {
@@ -1074,6 +1074,312 @@
         "ownerId": "google-oauth2|109893030989625529018"
       },
       "parentId": "AF71493E-4767-4199-99AC-B5572C4D8159"
+    },
+    {
+      "type": "Service",
+      "id": "DCA5A882-D914-476A-9C27-E013D9BCE5E4",
+      "lastModified": "2017-06-09T14:41:40.191+08:00",
+      "name": "asset_recycle",
+      "parentId": "E6C2D584-0626-4C80-BE08-CF569B27ACB4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "GA030001"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/deleteAssetRecycleItem.do"
+      },
+      "id": "51EF2C3F-10C8-4131-91F4-423F0A3A4868",
+      "lastModified": "2017-06-09T14:42:56.289+08:00",
+      "name": "deleteAssetRecycleItem.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "DCA5A882-D914-476A-9C27-E013D9BCE5E4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "GA030002"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/deleteAssetRecycleMultiItem.do"
+      },
+      "id": "21847FBE-DD6C-44D2-AB5C-258B22059B22",
+      "lastModified": "2017-06-09T14:44:52.457+08:00",
+      "name": "deleteAssetRecycleMultiItem.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "DCA5A882-D914-476A-9C27-E013D9BCE5E4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "type": "Text",
+              "name": "pageNum",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "pageSize",
+              "value": "10"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/getAssetRecycle.do"
+      },
+      "id": "00D96BF8-D7E0-43E3-B097-C56B80C89FA5",
+      "lastModified": "2017-06-09T14:42:11.724+08:00",
+      "name": "getAssetRecycle.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "DCA5A882-D914-476A-9C27-E013D9BCE5E4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "GA030002"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/notExistItemInAssetTable.do"
+      },
+      "id": "5AFCCC21-1F53-488B-BF93-CB9AC12F8C41",
+      "lastModified": "2017-06-09T14:45:01.739+08:00",
+      "name": "notExistItemInAssetTable.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "DCA5A882-D914-476A-9C27-E013D9BCE5E4"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetId",
+              "value": "Gtest"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetName",
+              "value": "资产测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "assetCategory",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "brandSpecification",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "unitMeasurement",
+              "value": "台"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "bookAmount",
+              "value": "5"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "inventoryAmount",
+              "value": "0"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "storageLocation",
+              "value": "虚拟"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "departmentResponsibility",
+              "value": "测试"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "personInCharge",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "statusUsage",
+              "value": "测试"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "192.168.1.107:28088",
+        "path": "/asset/recycleAssetItem.do"
+      },
+      "id": "E4D7E787-6E5A-473A-8C17-2671C760D978",
+      "lastModified": "2017-06-09T14:46:23.568+08:00",
+      "name": "recycleAssetItem.do",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109893030989625529018"
+      },
+      "parentId": "DCA5A882-D914-476A-9C27-E013D9BCE5E4"
     },
     {
       "type": "Service",
