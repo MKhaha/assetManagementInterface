@@ -294,8 +294,8 @@ ${serverUrl}/asset/notExistItemInAssetTable.do
 ${serverUrl}/asset/recycleAssetItem.do
 	request：
 	{
-		AssetInfo assetInfo
-			描述：资产信息
+		String assetId
+			描述：资产Id
 	}
 	success：
 	{
@@ -315,8 +315,12 @@ ${serverUrl}/asset/recycleAssetItem.do
 		{
 			"status": 1,
 			"msg": "传入数据为空"
+		}，
+		回收站中不存在对应资产编号:
+		{
+			"status": 1,
+			"msg": "回收站中不存在对应资产编号"
 		}
-
 	}
 	
 资产表中不存在多条资产记录
@@ -353,7 +357,7 @@ ${serverUrl}/asset/notExistMultiItemInAssetTable.do
 ${serverUrl}/asset/recycleAssetMultiItem.do
 	request：
 	{
-		List<AssetInfo> assetInfoList
+		List<String> assetIdList
 			描述：资产信息列表
 	}
 	success：
@@ -374,6 +378,10 @@ ${serverUrl}/asset/recycleAssetMultiItem.do
 		{
 			"status": 1,
 			"msg": "传入数据列表为空"
+		}，
+		回收站中不存在某些资产编号:
+		{
+			"status": 1,
+			"msg": "回收站中不存在某些资产编号" + ${第一个存在的资产Id}
 		}
-
 	}
